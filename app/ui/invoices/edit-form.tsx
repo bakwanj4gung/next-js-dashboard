@@ -54,7 +54,7 @@ export default function EditInvoiceForm({
           <div id='customer-error' aria-live='polite' aria-atomic="true">
             {state.errors?.customerId &&
               state.errors?.customerId.map((error: string) => (
-                <p className="text-red-500 text-sm mt-2">{error}</p>
+                <p key={error} className="text-red-500 text-sm mt-2">{error}</p>
               ))
             }
           </div>
@@ -82,7 +82,7 @@ export default function EditInvoiceForm({
             <div id='customer-error' aria-live='polite' aria-atomic="true">
               {state.errors?.amount &&
                 state.errors?.amount.map((error: string) => (
-                  <p className="text-red-500 text-sm mt-2">{error}</p>
+                  <p key={error} className="text-red-500 text-sm mt-2">{error}</p>
                 ))
               }
             </div>
@@ -134,7 +134,7 @@ export default function EditInvoiceForm({
           <div id='status-error' aria-live='polite' aria-atomic="true">
             {state.errors?.status &&
               state.errors?.status.map((error: string) => (
-                <p className="text-red-500 text-sm mt-2">{error}</p>
+                <p key={error} className="text-red-500 text-sm mt-2">{error}</p>
               ))
             }
           </div>
